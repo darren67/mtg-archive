@@ -1,0 +1,127 @@
+<p id="notice"><%= notice %></p>
+
+
+
+
+<div class="wrapper wrapper-content">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h1><%= @card.cardName %></h1>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+
+
+<table>
+
+<tr>
+<td>card image to go here
+</td>
+
+<td>
+
+<table class="table table-bordered table-striped table-hover table-responsive">
+
+  <tbody>
+    <tr>
+      <td class="col col-lg-3">
+        Card ID
+      </td>
+      <td>
+        <%= @card.cardID %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Set Total
+      </td>
+      <td>
+        <%= @card.setTotal %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Set Name
+      </td>
+      <td>
+        <%= @card.setName %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Card Name
+      </td>
+      <td>
+        <%= @card.cardName %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Card Type
+      </td>
+      <td>
+        <%= @card.cardType %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Power / Toughness
+      </td>
+      <td>
+        <%= @card.powerTough %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Casting Cost
+      </td>
+      <td>
+        <%= @card.castingCost %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Card Text
+      </td>
+      <td>
+        <%= @card.cardText %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Artist
+      </td>
+      <td>
+        <%= @card.artist %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Rarity
+      </td>
+      <td>
+        <%= @card.rarity %>
+      </td>
+    </tr>
+    <tr>
+    <td></td>
+      <td><button type="button" class="btn btn-default btn-sml"><%= link_to 'Edit', edit_card_path(@card) %>
+      <button type="button" class="btn btn-default btn-sml"><%= link_to 'Back', cards_path %></td>
+    </tr>
+  </tbody>
+</table>
+
+</td>
+</tr>
+
+
+
+</table>
+
+

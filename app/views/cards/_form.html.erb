@@ -1,0 +1,64 @@
+<%= form_for(@card, :html => { :multipart => true}) do |f| %>
+  <% if @card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@card.errors.count, "error") %> prohibited this card from being saved:</h2>
+
+      <ul>
+      <% @card.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+
+
+
+
+
+          <div class="ibox-content">
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <th><%= f.label :cardID %><br><%= f.number_field :cardID %>
+                            </th>
+                            <th><%= f.label :setTotal %><br><%= f.number_field :setTotal %>
+                            </th>
+                            <th><%= f.label :setName %><br><%= f.text_area :setName %>
+                            </th>
+                         </tr>
+                         <tr>  
+                            <th><%= f.label :cardName %><br><%= f.text_area :cardName %>
+                            </th>
+                            <th><%= f.label :cardType %><br><%= f.text_area :cardType %>
+                            </th>
+                            <th> <%= f.label :powerTough %><br><%= f.text_area :powerTough %>
+                            </th>
+                         </tr>   
+                            <th><%= f.label :castingCost %><br><%= f.text_area :castingCost %>
+                            </th>
+                            <th><%= f.label :cardText %><br><%= f.text_area :cardText %>
+                            </th>
+                            <th><%= f.label :artist %><br><%= f.text_area :artist %>
+                            </th>
+                         </tr>
+                         <tr>
+                            <th><%= f.label :rarity %><br><%= f.text_area :rarity %> 
+                            </th> 
+                            <th><%= f.label :image %><br><%= f.file_field :image %> 
+                            </th>
+                            <th><button  class="btn btn-default btn-lg btn-block"><%= f.submit %></button>
+                            </th>
+                         </tr>
+                        
+                        </thead>
+                    </table>
+                </div>
+                <% end %>
+
+
