@@ -9376,3 +9376,995 @@ Processing by CardsController#show as HTML
   Rendered layouts/_topnavbar.html.erb (0.1ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 148ms (Views: 145.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-09-17 21:08:23 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (17.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (16.5ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (50.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 835ms (Views: 765.4ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:08:28 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCard Load (0.6ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 129ms (Views: 112.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cards/1/edit" for ::1 at 2017-09-17 21:08:42 +0800
+Processing by CardsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCard Load (0.5ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered cards/_form.html.erb (51.2ms)
+  Rendered cards/edit.html.erb within layouts/application (54.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 206ms (Views: 203.7ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/cards/1" for ::1 at 2017-09-17 21:08:56 +0800
+Processing by CardsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l4Gem3yS0j/1KPWjjtQ8BHLce1KYHB68apAklrACVgE3idNmItCgTjQIyxEZ47xfJVjMB04DIA6lbg2HfWUHXA==", "card"=>{"cardID"=>"2222", "setTotal"=>"2333", "setName"=>"", "cardName"=>"ghhjhgj", "cardType"=>"2323", "powerTough"=>"", "castingCost"=>"232", "cardText"=>"", "artist"=>"", "rarity"=>""}, "commit"=>"Update Card", "id"=>"1"}
+  [1m[36mCard Load (0.5ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (4.4ms)[0m  [1mUPDATE "cards" SET "setTotal" = $1, "cardType" = $2, "castingCost" = $3, "updated_at" = $4 WHERE "cards"."id" = $5[0m  [["setTotal", 2333], ["cardType", "2323"], ["castingCost", "232"], ["updated_at", "2017-09-17 13:08:56.384939"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/cards/1
+Completed 302 Found in 29ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:08:56 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCard Load (0.7ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 124ms (Views: 122.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:09:00 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.8ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 98ms (Views: 96.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:09:04 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 107ms (Views: 104.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:09:29 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 119ms (Views: 117.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:09:38 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 102ms (Views: 100.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:10:06 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 102ms (Views: 100.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:10:11 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 100ms (Views: 97.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-09-17 21:10:42 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 94ms (Views: 92.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-09-17 21:19:01 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.5ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (39.7ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 301ms (Views: 293.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:19:07 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered cards/show.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `cardName' for nil:NilClass):
+     8:     <div class="col-lg-12">
+     9:         <div class="ibox float-e-margins">
+    10:             <div class="ibox-title">
+    11:                 <h1><%= @card.cardName %></h1>
+    12:                 <div class="ibox-tools">
+    13:                     <a class="collapse-link">
+    14:                         <i class="fa fa-chevron-up"></i>
+  app/views/cards/show.html.erb:11:in `_app_views_cards_show_html_erb___3111814932299322152_70163939042500'
+
+
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.8ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (101.1ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:19:26 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered cards/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `cardName' for nil:NilClass):
+     8:     <div class="col-lg-12">
+     9:         <div class="ibox float-e-margins">
+    10:             <div class="ibox-title">
+    11:                 <h1><%= @card.cardName %></h1>
+    12:                 <div class="ibox-tools">
+    13:                     <a class="collapse-link">
+    14:                         <i class="fa fa-chevron-up"></i>
+  app/views/cards/show.html.erb:11:in `_app_views_cards_show_html_erb___3111814932299322152_70163939042500'
+
+
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (115.0ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:19:32 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered cards/show.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `cardName' for nil:NilClass):
+     8:     <div class="col-lg-12">
+     9:         <div class="ibox float-e-margins">
+    10:             <div class="ibox-title">
+    11:                 <h1><%= @card.cardName %></h1>
+    12:                 <div class="ibox-tools">
+    13:                     <a class="collapse-link">
+    14:                         <i class="fa fa-chevron-up"></i>
+  app/views/cards/show.html.erb:11:in `_app_views_cards_show_html_erb___3111814932299322152_70163939042500'
+
+
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.1ms)
+
+
+Started GET "/" for ::1 at 2017-09-17 21:19:54 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.6ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 117ms (Views: 108.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:19:57 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 128ms (Views: 125.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-09-17 21:20:01 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.6ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 102.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:20:03 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCard Load (0.6ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 106.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:21:43 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 180ms (Views: 177.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:21:47 +0800
+Processing by CardsController#index as HTML
+  Rendered cards/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/darrenwillans/Sites/mtg-archive/app/views/cards/index.html.erb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ath(card), method: :delete data: { confirm: 'Are you sure?' ...
+...                               ^):
+  app/views/cards/index.html.erb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.8ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (103.8ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:22:07 +0800
+Processing by CardsController#index as HTML
+  Rendered cards/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/darrenwillans/Sites/mtg-archive/app/views/cards/index.html.erb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ath(card), method: :delete data: { confirm: 'Are you sure?' ...
+...                               ^):
+  app/views/cards/index.html.erb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (114.4ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:22:19 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 103.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:22:24 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 102.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-09-17 21:22:28 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 98ms (Views: 97.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards/1/edit" for ::1 at 2017-09-17 21:22:32 +0800
+Processing by CardsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCard Load (0.2ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered cards/_form.html.erb (6.3ms)
+  Rendered cards/edit.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 111ms (Views: 109.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:22:36 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.0ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 134ms (Views: 132.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:22:38 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 121ms (Views: 119.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:22:40 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.6ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 147ms (Views: 145.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:22:43 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 96.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:22:45 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.5ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 102.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:24:19 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (15.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 141ms (Views: 135.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2017-09-17 21:24:23 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.7ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 98ms (Views: 96.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:24:26 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 112ms (Views: 109.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:24:31 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 93.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:25:13 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 112ms (Views: 106.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:25:16 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCard Load (0.5ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_topnavbar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 102ms (Views: 98.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-09-17 21:25:19 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.5ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 111ms (Views: 109.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-09-17 21:32:15 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.0ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (68.0ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_topnavbar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 409ms (Views: 383.5ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:32:18 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCard Load (0.5ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 240ms (Views: 236.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-09-17 21:32:22 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 184ms (Views: 182.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-09-17 21:32:29 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.7ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 133ms (Views: 131.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:32:34 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCard Load (0.6ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 101.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:33:00 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 121ms (Views: 102.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:33:10 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 116ms (Views: 114.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:33:13 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 92ms (Views: 90.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:33:16 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 103ms (Views: 101.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:35:04 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (20.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 155ms (Views: 146.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/cards/1" for ::1 at 2017-09-17 21:35:07 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered cards/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 130ms (Views: 127.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-09-17 21:35:10 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 103ms (Views: 101.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-09-17 21:37:12 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 103ms (Views: 101.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/cards/1" for ::1 at 2017-09-17 21:37:16 +0800
+Processing by CardsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uormX6QKLL7dUN2N/8KfXRe8taFXR8SxU5VKDiauy3Eagqui+khezxxw4z9o9R8GQDgC9IFY+gOca2Mf68maLA==", "id"=>"1"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (5.6ms)[0m  [1mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 1]]
+  [1m[35m (5.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/cards
+Completed 302 Found in 21ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:37:16 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 107ms (Views: 105.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards/new" for ::1 at 2017-09-17 21:37:21 +0800
+Processing by CardsController#new as HTML
+  Rendered cards/_form.html.erb (5.3ms)
+  Rendered cards/new.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 103ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cards" for ::1 at 2017-09-17 21:37:28 +0800
+Processing by CardsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oI3/5mZ4xq4B5Vv4vv5Qkyv+1Zc6SH0RgD6lg4BqMlcAhbIbODq038DFZUopydDIfHpiwuxXQ6NPwIySTQ1jCg==", "card"=>{"cardID"=>"11212121", "setTotal"=>"", "setName"=>"", "cardName"=>"", "cardType"=>"", "powerTough"=>"", "castingCost"=>"", "cardText"=>"", "artist"=>"", "rarity"=>""}, "commit"=>"Create Card"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (8.2ms)[0m  [1mINSERT INTO "cards" ("cardID", "setName", "cardName", "cardType", "powerTough", "castingCost", "cardText", "artist", "rarity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["cardID", 11212121], ["setName", ""], ["cardName", ""], ["cardType", ""], ["powerTough", ""], ["castingCost", ""], ["cardText", ""], ["artist", ""], ["rarity", ""], ["created_at", "2017-09-17 13:37:28.636835"], ["updated_at", "2017-09-17 13:37:28.636835"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/cards/2
+Completed 302 Found in 30ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/cards/2" for ::1 at 2017-09-17 21:37:28 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered cards/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 148ms (Views: 146.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:37:31 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.5ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 103.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cards/new" for ::1 at 2017-09-17 21:37:39 +0800
+Processing by CardsController#new as HTML
+  Rendered cards/_form.html.erb (5.8ms)
+  Rendered cards/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 107ms (Views: 105.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cards" for ::1 at 2017-09-17 21:37:44 +0800
+Processing by CardsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HCVycW69wbqHaQcDr8g4Dp0FZvrk2JNmDEKABPAj9KK8LT+MMP+zy0ZJObE4/7hVyoHRrzLHrdTDvKkVPUSl/w==", "card"=>{"cardID"=>"44444", "setTotal"=>"", "setName"=>"", "cardName"=>"", "cardType"=>"", "powerTough"=>"", "castingCost"=>"", "cardText"=>"", "artist"=>"", "rarity"=>""}, "commit"=>"Create Card"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cards" ("cardID", "setName", "cardName", "cardType", "powerTough", "castingCost", "cardText", "artist", "rarity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["cardID", 44444], ["setName", ""], ["cardName", ""], ["cardType", ""], ["powerTough", ""], ["castingCost", ""], ["cardText", ""], ["artist", ""], ["rarity", ""], ["created_at", "2017-09-17 13:37:44.354255"], ["updated_at", "2017-09-17 13:37:44.354255"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/cards/3
+Completed 302 Found in 8ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/cards/3" for ::1 at 2017-09-17 21:37:44 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered cards/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 146ms (Views: 143.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:37:47 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 118ms (Views: 116.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/cards/3" for ::1 at 2017-09-17 21:37:51 +0800
+Processing by CardsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/joWn+iIQ14UacQ6ln40nf8aeL1FXMut9I6UfZKmzydeMltitsoxL9VJ+ogBSbTGqJ7P6JND9R87cL1sX8Geeg==", "id"=>"3"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 3]]
+  [1m[35m (6.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/cards
+Completed 302 Found in 11ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:37:51 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 112ms (Views: 110.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/cards/2" for ::1 at 2017-09-17 21:37:53 +0800
+Processing by CardsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vPOvT7DyBhurZp81+NFiExaKDhYQ3FDPgL9NxddWl4kc++Ky7rB0ampGoYdv5uJIQQ65Q8bDbn1PQWTUGjHG1A==", "id"=>"2"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/cards
+Completed 302 Found in 7ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:37:53 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.6ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 123ms (Views: 121.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:39:15 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (49.0ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fa0a321eb98>:0x007fa0a10d0e00>):
+    32: <button type="button" class="btn btn-default btn-lg btn-block"><%= link_to 'New Card', new_card_path %></button>
+    33: 
+    34: 
+    35:  <%= button_to "delete", meal_path(:id => recipe.id), :method => :delete %>
+  app/views/cards/index.html.erb:35:in `_app_views_cards_index_html_erb__4021739645859166349_70163903574000'
+
+
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (24.9ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (116.9ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:39:37 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 97.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards/new" for ::1 at 2017-09-17 21:39:39 +0800
+Processing by CardsController#new as HTML
+  Rendered cards/_form.html.erb (5.4ms)
+  Rendered cards/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 102ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cards" for ::1 at 2017-09-17 21:39:44 +0800
+Processing by CardsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6i5tBNWU7Z8C8YQYmAfiYAgybs9fUEQkL3MHXr4reWNKJiD5i9af7sPRuqoPMGI7X7bZmolPepbgjS5Pc0woPg==", "card"=>{"cardID"=>"2222", "setTotal"=>"", "setName"=>"", "cardName"=>"", "cardType"=>"", "powerTough"=>"", "castingCost"=>"", "cardText"=>"", "artist"=>"", "rarity"=>""}, "commit"=>"Create Card"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("cardID", "setName", "cardName", "cardType", "powerTough", "castingCost", "cardText", "artist", "rarity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["cardID", 2222], ["setName", ""], ["cardName", ""], ["cardType", ""], ["powerTough", ""], ["castingCost", ""], ["cardText", ""], ["artist", ""], ["rarity", ""], ["created_at", "2017-09-17 13:39:44.846539"], ["updated_at", "2017-09-17 13:39:44.846539"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/cards/4
+Completed 302 Found in 9ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/cards/4" for ::1 at 2017-09-17 21:39:44 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 139ms (Views: 136.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:39:47 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.3ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 102.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards/4/edit" for ::1 at 2017-09-17 21:39:49 +0800
+Processing by CardsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered cards/_form.html.erb (4.8ms)
+  Rendered cards/edit.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 103.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/cards/4" for ::1 at 2017-09-17 21:39:52 +0800
+Processing by CardsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6wLFXdjexRecuIgeRHoAmwpFCtpOKbpQa3sRCuxWpNpLCoighpy3Zl2YtqzTTYDAXcG9j5g2hOKkhTgbITH1hw==", "card"=>{"cardID"=>"2222", "setTotal"=>"", "setName"=>"", "cardName"=>"", "cardType"=>"", "powerTough"=>"", "castingCost"=>"", "cardText"=>"", "artist"=>"", "rarity"=>""}, "commit"=>"Update Card", "id"=>"4"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/cards/4
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/cards/4" for ::1 at 2017-09-17 21:39:52 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered cards/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 107ms (Views: 105.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:39:54 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.6ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 155ms (Views: 153.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cards/4" for ::1 at 2017-09-17 21:39:56 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered cards/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 114ms (Views: 111.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:39:58 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 106ms (Views: 105.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/cards/4" for ::1 at 2017-09-17 21:40:00 +0800
+Processing by CardsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WVvkEWDfjqctHHDgnqGfdjfSIt8dfrVKUpMJu6QL6YT5U6nsPp381uw8TlIJlh8tYFaVisthi/idbSCqaWy42Q==", "id"=>"4"}
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "cards" WHERE "cards"."id" = $1  [["id", 4]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/cards
+Completed 302 Found in 6ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:40:00 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.3ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 102.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards/new" for ::1 at 2017-09-17 21:42:25 +0800
+Processing by CardsController#new as HTML
+  Rendered cards/_form.html.erb (8.9ms)
+  Rendered cards/new.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_topnavbar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 164ms (Views: 162.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cards" for ::1 at 2017-09-17 21:42:28 +0800
+Processing by CardsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YTVVYhccCdjPQuVQFpXpcTxRDvfG2GtRS++4EgwTh2fBPRifSV57qQ5i2+KBomkqa9W5ohDHVeOEEZEDwXTWOg==", "card"=>{"cardID"=>"3", "setTotal"=>"", "setName"=>"", "cardName"=>"", "cardType"=>"", "powerTough"=>"", "castingCost"=>"", "cardText"=>"", "artist"=>"", "rarity"=>""}, "commit"=>"Create Card"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "cards" ("cardID", "setName", "cardName", "cardType", "powerTough", "castingCost", "cardText", "artist", "rarity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["cardID", 3], ["setName", ""], ["cardName", ""], ["cardType", ""], ["powerTough", ""], ["castingCost", ""], ["cardText", ""], ["artist", ""], ["rarity", ""], ["created_at", "2017-09-17 13:42:28.847192"], ["updated_at", "2017-09-17 13:42:28.847192"]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/cards/5
+Completed 302 Found in 12ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/cards/5" for ::1 at 2017-09-17 21:42:28 +0800
+Processing by CardsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered cards/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 132ms (Views: 129.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:42:31 +0800
+Processing by CardsController#index as HTML
+  Rendered cards/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/darrenwillans/Sites/mtg-archive/app/views/cards/index.html.erb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+...rd.id), :method => :delete data: { confirm: 'Are you sure?' ...
+...                               ^):
+  app/views/cards/index.html.erb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/darrenwillans/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.9ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:42:55 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 101ms (Views: 99.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/cards/5" for ::1 at 2017-09-17 21:42:59 +0800
+Processing by CardsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Q6h45+Vhu6MDlXs6RGcsShsiK+m4c1yfNuP9zhFRxtbjoDUauyPJ0sK1RYjTUKwRTKacvG5sYi35HdTf3DaXiw==", "id"=>"5"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/cards
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:42:59 +0800
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered cards/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 102ms (Views: 100.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for ::1 at 2017-09-17 21:44:03 +0800
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.6ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered cards/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_topnavbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 112ms (Views: 110.0ms | ActiveRecord: 0.6ms)

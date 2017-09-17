@@ -61,7 +61,13 @@ class CardsController < ApplicationController
   end
 
 
-
+  #def destroy
+  #  @card.destroy
+   # respond_to do |format|
+  #    format.html { redirect_to cards_url }
+   #   format.json { head :no_content }
+  #  end
+  #end
 
 
 
