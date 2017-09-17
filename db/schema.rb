@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20170611122719) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "cards", force: :cascade do |t|
     t.integer  "cardID"
     t.integer  "setTotal"
@@ -28,8 +31,5 @@ ActiveRecord::Schema.define(version: 20170611122719) do
     t.datetime "updated_at",  null: false
     t.string   "image"
   end
-
-# Could not dump table "cards1" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
 
 end

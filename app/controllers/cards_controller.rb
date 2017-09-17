@@ -51,15 +51,19 @@ class CardsController < ApplicationController
     end
   end
 
-  # DELETE /cards/1
-  # DELETE /cards/1.json
+
+
   def destroy
+    @card = Card.find(params[:id])
     @card.destroy
-    respond_to do |format|
-      format.html { redirect_to cards_url }
-      format.json { head :no_content }
-    end
+   
+    redirect_to cards_path
   end
+
+
+
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -72,3 +76,13 @@ class CardsController < ApplicationController
       params.require(:card).permit(:cardID, :setTotal, :setName, :cardName, :cardType, :powerTough, :castingCost, :cardText, :artist, :rarity)
     end
 end
+
+
+
+#index
+#show
+#new
+#edit
+#create
+#update
+#destroy
