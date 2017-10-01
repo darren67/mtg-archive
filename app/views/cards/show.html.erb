@@ -21,20 +21,35 @@
 <table>
 
 <tr>
-<td>card image to go here
+<td>  
+
+<%= image_tag("ZurgoBellstriker.jpg", :alt => "" ) %>
 </td>
 
 <td>
 
 <table class="table table-bordered table-striped table-hover table-responsive">
 
-  <tbody>
+
+
+ 
+
+ 
+  <tbody> 
     <tr>
       <td class="col col-lg-3">
         Card ID
       </td>
       <td>
         <%= @card.cardID %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+       Card Number
+      </td>
+      <td>
+        <%= @card.cardNumber %>
       </td>
     </tr>
     <tr>
@@ -47,6 +62,22 @@
     </tr>
     <tr>
       <td>
+        Card Name
+      </td>
+      <td>
+        <%= @card.cardName %>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        Card Colour
+      </td>
+      <td>
+        <%= @card.cardColour %>
+      </td>
+    </tr>
+    <tr>
+      <td>
         Set Name
       </td>
       <td>
@@ -55,20 +86,11 @@
     </tr>
     <tr>
       <td>
-        Card Name
-      </td>
-      <td>
-        <%= @card.cardName %>
-      </td>
-    </tr>
-    <tr>
-      <td>
         Card Type
       </td>
-      <td>
-        <%= @card.cardType %>
+            <td>
+         <%= @card.cardType %>
       </td>
-    </tr>
     <tr>
       <td>
         Power / Toughness

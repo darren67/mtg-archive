@@ -18,9 +18,11 @@ ActiveRecord::Schema.define(version: 20170611122719) do
 
   create_table "cards", force: :cascade do |t|
     t.integer  "cardID"
+    t.integer  "cardNumber"
     t.integer  "setTotal"
-    t.text     "setName"
+    t.text     "cardColour"
     t.text     "cardName"
+    t.text     "setName"
     t.text     "cardType"
     t.text     "powerTough"
     t.text     "castingCost"
