@@ -23,6 +23,11 @@
                 <i class="fa fa-laptop"></i> <span class="nav-label">Cards</span>
                 <% end %>
             </li>
+                <li class="<%= 'active' if current_page?('/') %>">
+                <%= link_to "/decks" do %>
+                <i class="fa fa-laptop"></i> <span class="nav-label">Decks</span>
+                <% end %>
+            </li>
             <!--<li class="<%= 'active' if current_page?('/home/minor') %>">
                 <%= link_to "/home/minor" do %>
                 <i class="fa fa-desktop"></i> <span class="nav-label">Minor page</span>

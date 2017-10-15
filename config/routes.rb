@@ -1,6 +1,9 @@
 Myapp::Application.routes.draw do
   resources :cards
   get "cards/index"
+
+  resources :decks
+ 
   #get "home/index"
   #get "home/minor"
   #get "home/another"
