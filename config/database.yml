@@ -28,18 +28,22 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: mtg-archive-db
+  database: dbmtg
   pool: 5
-  username: 
-  password:
+  username: postgres
+  password: bloopicc67
   timeout: 5000
+  host: localhost
+ 
 
 
 test:
   adapter: postgresql
   encoding: unicode
-  database: mtg-archive-db
+  database: dbmtg
   pool: 5
-  username: 
-  password:
+  username: postgres
+  password: bloopicc67
   timeout: 5000
+  host: localhost
+ 
