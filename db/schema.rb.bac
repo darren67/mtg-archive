@@ -34,4 +34,18 @@ ActiveRecord::Schema.define(version: 20170611122719) do
     t.string   "image"
   end
 
+
+  create_table "decks", force: :cascade do |t|
+    t.integer  "cardID"
+    t.integer  "deckID"
+    t.datetime "dateCreated"
+    t.text     "deckName"
+    t.text     "deckType"
+    t.text     "deckDescription"
+    t.integer  "totalCards"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+
 end

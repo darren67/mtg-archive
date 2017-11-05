@@ -1,5 +1,0 @@
-class AddImageExtensionToCards < ActiveRecord::Migration
-  def change
-  	add_column :cards, :extension, :string
-  end
-end

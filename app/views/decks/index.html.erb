@@ -9,13 +9,29 @@
       <th colspan="4"></th>
     </tr>
         <tr>
-      <th>Card QTY</th>
-      <th>Card Name</th>
+      <th>Deck Description</th>
+      <th>Deck Type</th>
       <th>Casting Cost</th>
       <th>Set Name</th>
       <th colspan="4"></th>
     </tr>
   </thead>
+
+
+    <tbody>
+    <% @decks.each do |deck| %>
+      <tr>
+        <td><%= deck.deckName %></td>
+        <td><%= deck.deckDescription %></td>
+        <td><%= deck.deckType %></td>
+        <td><%= deck.dateCreated %></td>
+        <td><%= deck.totalCards %></td>
+        <td><%= link_to 'Show', deck %></td>
+        <td><%= link_to 'Edit', edit_deck_path(deck) %></td>
+         <td><%= button_to "delete", deck_path(:id => deck.id), :method => :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
 
 </table>
 

@@ -1,3 +1,15 @@
+<%= form_for(@deck, :html => { :multipart => true}) do |f| %>
+  <% if @deck.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@card.errors.count, "error") %> prohibited this card from being saved:</h2>
+
+      <ul>
+      <% @deck.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
 
 
@@ -7,18 +19,21 @@
                     <table class="table table-bordered table-striped">
                         <thead>
                         <tr>
-                            <th><%= f.label :deckName %><br><%= f.text_area :deckName %>
-                            </th>
+
 
                          </tr>
                          <tr>  
-                            <th><%= f.label :cardQty %><br><%= f.text_area :cardQty %>
+                            <th><%= f.label :deckID %><br><%= f.text_area :deckID %>
                             </th>
-                            <th><%= f.label :cardName %><br><%= f.text_area :cardName %>
+                            <th><%= f.label :dateCreated %><br><%= f.text_area :dateCreated %>
                             </th>
-                            <th><%= f.label :castingCost %><br><%= f.text_area :castingCost %>
+                            <th><%= f.label :deckName %><br><%= f.text_area :deckName %>
                             </th>
-                            <th><%= f.label :setName %><br><%= f.text_area :setName %>
+                            <th><%= f.label :deckType %><br><%= f.text_area :deckType %>
+                            </th>
+                            <th><%= f.label :deckDescription %><br><%= f.text_area :deckDescription %>
+                            </th>
+                            <th><%= f.label :totalCards %><br><%= f.text_area :totalCards %>
                             </th>
                          </tr>
 
@@ -34,13 +49,4 @@
                         </thead>
                     </table>
                     </div>
-
-
-
-
-
-deckName
-ardQty 
-cardName
-manaCost
-setNam
+  <% end %>
