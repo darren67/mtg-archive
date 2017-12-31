@@ -20,28 +20,18 @@
 
 <table>
 
-<tr>
-<td>  
-
-<%= image_tag("ZurgoBellstriker.jpg", :alt => "" ) %>
-</td>
-
+<tr >
+   <td class="img-pad"><%= image_tag @card.image_url.to_s%></td>
 <td>
 
 <table class="table table-bordered table-striped table-hover table-responsive">
-
-
-
- 
-
- 
   <tbody> 
     <tr>
       <td class="col col-lg-3">
-        Card ID
+        
       </td>
       <td>
-        <%= @card.cardID %>
+        
       </td>
     </tr>
     <tr>
@@ -134,7 +124,10 @@
     <tr>
     <td></td>
       <td><button type="button" class="btn btn-default btn-sml"><%= link_to 'Edit', edit_card_path(@card) %>
-      <button type="button" class="btn btn-default btn-sml"><%= link_to 'Back', cards_path %></td>
+      <button type="button" class="btn btn-default btn-sml"><%= link_to 'Back', cards_path %>
+      
+
+      </td>
     </tr>
   </tbody>
 </table>

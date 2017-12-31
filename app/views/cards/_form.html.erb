@@ -18,7 +18,7 @@
                     <table class="table table-bordered table-striped">
                         <thead>
                         <tr>
-                            <th><%= f.label :cardID %><br><%= f.number_field :cardID %>
+                            <th>
                             </th>
                             <th><%= f.label :cardNumber %><br><%= f.number_field :cardNumber %>
                             </th>
@@ -52,11 +52,11 @@
                             </th>
                          </tr>
                           <tr>
-                            <th><button  class="btn btn-default btn-lg btn-block"><%= f.submit %></button> 
+                            <th><button  class="btn btn-default btn-lg btn-block"><%= f.file_field :image %></button> 
                             </th> 
                             <th> 
                             </th>
-                            <th>
+                            <th><button  class="btn btn-default btn-lg btn-block"><%= f.submit %></button> 
                             </th>
                          </tr>
                         

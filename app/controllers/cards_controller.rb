@@ -12,6 +12,14 @@ class CardsController < ApplicationController
   def show
   end
 
+
+
+
+
+
+
+
+
   # GET /cards/new
   def new
     @card = Card.new
@@ -20,6 +28,8 @@ class CardsController < ApplicationController
   # GET /cards/1/edit
   def edit
   end
+
+
 
   # POST /cards
   # POST /cards.json
@@ -79,7 +89,7 @@ class CardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def card_params
-      params.require(:card).permit(:cardID, :cardNumber, :setTotal, :setName, :cardName, :cardColour,:cardType, :powerTough, :castingCost, :cardText, :artist, :rarity, :decks)
+      params.require(:card).permit(:cardID, :cardNumber, :setTotal, :setName, :cardName, :cardColour,:cardType, :powerTough, :castingCost, :cardText, :artist, :rarity, :decks, :image)
     end
 end
 
